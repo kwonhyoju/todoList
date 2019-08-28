@@ -1,0 +1,16 @@
+{
+    "dependencies": {
+        "dev-server": "^0.1.0",
+        "node-sass": "^4.12.0",
+        "nodemon": "^1.19.1"
+    },
+    "devDependencies": {
+        "sass": "^1.17.4",
+        "typescript": "^3.4.1"
+    },
+    "scripts": {
+        "start": "parcel index.html",
+        "build-css": "node-sass --include-path scss scss/index.scss css/index.css --source-map-root ./css --source-map-embed true --output-style compressed",
+        "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    }
+}
