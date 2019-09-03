@@ -2,7 +2,7 @@
     "dependencies": {
         "dev-server": "^0.1.0",
         "node-sass": "^4.12.0",
-        "nodemon": "^1.19.1"
+        "nodemon": "^1.19.2"
     },
     "devDependencies": {
         "sass": "^1.17.4",
