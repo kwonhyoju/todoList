@@ -1,22 +1,23 @@
-const bgImg = document.querySelector("body");
+const backImage = document.querySelector("body");
 
-const IMGNUM = 5;
+const changeImgNum = 5;
 
-function paintImg(num){
-    const img = new Image();
-    img.src= `img/${num+1}.jpg`;
-    img.classList.add("bgImage");
-    bgImg.append(img);
+function handleRandomImg(){
+    const randomNum = Math.floor(Math.random()*changeImgNum)+1;
+    return randomNum;
+
 }
 
-function randomNum (){
-    const bgRandomNum = Math.floor(Math.random() * IMGNUM);
-    return bgRandomNum;
+function paintBackImg(randomNum){
+    const img = new Image();
+    img.src = `./img/${randomNum}.jpg`;
+    img.classList.add("bgImage");
+    backImage.appendChild(img);
 }
 
 function init(){
-    const Number = randomNum();
-    paintImg(Number);
+    const num = handleRandomImg();    
+    paintBackImg(num);
 }
 
 init();

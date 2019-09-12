@@ -1,91 +1,97 @@
 @import "common";
 
 body {
-    background: rgb(194, 219, 253);
+    background: #000;
+    .wrap{
+        display:flex;
+        height: 100%;
+        >div{
+            width:100%;
+            margin:auto 0;
+            .clock {
+                text-align: center;
 
-    .clock {
-        text-align: center;
-
-        h1 {
-            font-size: 40px;
-            color: rgb(255, 195, 67);
-            padding: 10px 0;
-        }
-    }
-
-    .form {
-        display: none;
-
-        >input {
-            border: none;
-            width: 70%;
-            text-align: center;
-            margin: 0 auto;
-            display: block;
-            padding: 20px 0;
-            border-radius: 5px;
-
-            &:focus {
-                outline: none;
+                h1 {
+                    font-size: 40px;
+                    color: rgb(255, 195, 67);
+                }
             }
-        }
-    }
 
-    .greeting {
-        display: none;
-        text-align: center;
-        font-size: 24px;
-        padding-top: 20px;
-        color: rgb(30, 120, 255);
-    }
+            .form {
+                display: none;
 
-    .todo-form{
-        text-align: center;
-        > input {
-            width: 70%;
-            padding:20px 0;
-            margin-top:20px;
-            border-radius: 5px;
-            text-align:center;
-        }
-    }
+                >input {
+                    border: none;
+                    width: 70%;
+                    text-align: center;
+                    margin: 0 auto;
+                    display: block;
+                    padding: 20px 0;
+                    border-radius: 5px;
 
-    >ul{
-        text-align: center;
-        margin:0 auto;
-        >li{
-            font-size: 24px;
-            color: #fff;
-            font-weight: bold;
-            >button{
-                background: #fff;
-                border-radius: 5px;
-                padding: 2px 10px;
-                margin-left: 5px;
-                box-sizing: border-box;
+                    &:focus {
+                        outline: none;
+                    }
+                }
             }
-        }
-    }
 
-    .showing {
-        display: block;
-    }
+            .greeting {
+                display: none;
+                text-align: center;
+                font-size: 24px;
+                padding-bottom: 40px;
+                color: rgb(255, 195, 67);
+            }
 
-    .divTag {
-        width: 100%;
-        height: 200px;
-        background: #666;
-        padding: 30px 0;
-        box-sizing: border-box;
+            .todo-form{
+                text-align: center;
+                > input {
+                    width: 70%;
+                    padding:20px 0;
+                    margin-bottom:10px;
+                    border-radius: 5px;
+                    text-align:center;
+                }
+            }
 
-        >p {
-            width: 100%;
-            height: 80px;
-            background: #999;
+            >ul{
+                text-align: center;
+                margin:0 auto;
+                >li{
+                    font-size: 20px;
+                    color: #fff;
 
-            >span {
+                    >button{
+                        background: #fff;
+                        border-radius: 5px;
+                        padding: 2px 10px;
+                        margin-left: 15px;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+
+            .showing {
                 display: block;
-                background: #fff;
+            }
+
+            .divTag {
+                width: 100%;
+                height: 200px;
+                background: #666;
+                padding: 30px 0;
+                box-sizing: border-box;
+
+                >p {
+                    width: 100%;
+                    height: 80px;
+                    background: #999;
+
+                    >span {
+                        display: block;
+                        background: #fff;
+                    }
+                }
             }
         }
     }
@@ -97,4 +103,5 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
+    opacity: .45;
 }
